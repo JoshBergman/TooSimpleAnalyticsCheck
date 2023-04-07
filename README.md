@@ -1,4 +1,4 @@
-# TooSimpleAnalytics CHECK
+# TooSimpleAnalytics CHECKER
 
 #### By: Joshua Bergman
 
