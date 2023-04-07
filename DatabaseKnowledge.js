@@ -1,4 +1,4 @@
-const yourDatabaseURI = "YourURIHere";
+const yourDatabaseURI = "(Your URI Here)";
 
 const { MongoClient } = require("mongodb");
 const client = new MongoClient(yourDatabaseURI);
@@ -8,11 +8,11 @@ const collectionName = "viewLog";
 const stdCollection = client.db(dbname).collection(collectionName);
 
 const getDatabaseKnowledge = async () => {
-  const result = await stdCollection
+  const dbKnowledge = await stdCollection
     .find({ views: { $gte: 0 } }, { projection: { _id: 0 } })
     .toArray();
 
-  return result;
+  return dbKnowledge;
 };
 
 exports.getDatabaseKnowledge = getDatabaseKnowledge;
